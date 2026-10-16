@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ankita Ashish Warkhade | Computer Engineering Student & Full Stack Developer</title>
+<meta name="description" content="Portfolio of Ankita Ashish Warkhade, a B.Tech Computer Engineering student and full stack web developer seeking internships and entry-level software roles.">
+<style>
+:root{--bg:#0a1128;--bg2:#0f1a3a;--card:#111d42;--line:#1f2f5e;--text:#f1f5ff;--muted:#a9b6d8;--accent:#38bdf8;--accent2:#22d3ee}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-padding-top:70px}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}.card,.btn,.tag{transition:transform .2s,border-color .2s,background .2s}.card:hover{transform:translateY(-4px)}}
+body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:linear-gradient(180deg,var(--bg),var(--bg2));background-attachment:fixed;color:var(--text);line-height:1.65;overflow-x:hidden}
+a{color:var(--accent);text-decoration:none}
+a:focus-visible,button:focus-visible{outline:3px solid var(--accent2);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+section{padding:80px 0}
+h2{font-size:clamp(1.6rem,4vw,2.1rem);margin-bottom:8px}
+h2::after{content:"";display:block;width:56px;height:3px;background:linear-gradient(90deg,var(--accent),var(--accent2));margin-top:10px;border-radius:3px}
+.sub{color:var(--muted);margin:14px 0 30px}
+header{position:sticky;top:0;z-index:50;background:rgba(10,17,40,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-weight:700;font-size:1.15rem;color:var(--text)}.logo span{color:var(--accent)}
+.links{display:flex;gap:6px;list-style:none}
+.links a{color:var(--muted);padding:8px 9px;border-radius:8px;font-size:.92rem;display:block}
+.links a:hover{color:var(--text);background:var(--card)}
+.menu{display:none;background:none;border:1px solid var(--line);color:var(--text);padding:8px 12px;border-radius:8px;font-size:1rem;cursor:pointer}
+@media(max-width:760px){.menu{display:block}.links{display:none;position:absolute;top:64px;left:0;right:0;flex-direction:column;background:var(--bg);padding:10px 20px 16px;border-bottom:1px solid var(--line)}.links.open{display:flex}}
+.hero{padding:90px 0 70px}
+.hero .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center}
+@media(max-width:860px){.hero .wrap{grid-template-columns:1fr}}
+.hi{color:var(--accent);font-weight:600;letter-spacing:.04em}
+h1{font-size:clamp(2.1rem,6vw,3.4rem);line-height:1.15;margin:8px 0 10px}
+.headline{font-size:clamp(1.05rem,2.5vw,1.3rem);color:var(--accent2);margin-bottom:16px}
+.intro{color:var(--muted);max-width:560px}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin:26px 0 20px}
+.btn{display:inline-block;padding:12px 22px;border-radius:10px;font-weight:600;border:1px solid var(--accent);cursor:pointer}
+.btn.primary{background:linear-gradient(90deg,var(--accent),var(--accent2));color:#04122b;border-color:transparent}
+.btn.ghost{color:var(--accent)}.btn:hover{transform:translateY(-2px)}
+.social{display:flex;flex-wrap:wrap;gap:16px;font-size:.95rem}
+.side{display:flex;flex-direction:column;gap:18px}.photo{width:100%;max-width:300px;aspect-ratio:1/1;object-fit:cover;object-position:top;border-radius:20px;border:2px solid var(--accent);box-shadow:0 20px 50px rgba(34,211,238,.15);align-self:center}
+.code{background:#08102a;border:1px solid var(--line);border-radius:14px;padding:18px;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.85rem;color:var(--muted);box-shadow:0 20px 50px rgba(34,211,238,.08);overflow:hidden}
+.dots{display:flex;gap:6px;margin-bottom:12px}.dots i{width:10px;height:10px;border-radius:50%;background:var(--line)}
+.dots i:first-child{background:#f87171}.dots i:nth-child(2){background:#fbbf24}.dots i:nth-child(3){background:#4ade80}
+.code .k{color:var(--accent)}.code .s{color:#86efac}.code .c{color:#64748b}
+.grid{display:grid;gap:20px}
+.g3{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.g2{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px}
+.card:hover{border-color:var(--accent)}
+.card h3{font-size:1.1rem;margin-bottom:6px}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.tag{background:rgba(56,189,248,.1);border:1px solid rgba(56,189,248,.3);color:#cfeeff;padding:4px 12px;border-radius:999px;font-size:.85rem}
+.meta{color:var(--muted);font-size:.9rem}
+.card p{color:var(--muted);margin-top:8px}
+.card ul{margin:10px 0 0 20px;color:var(--muted)}
+.plinks{display:flex;gap:16px;margin-top:16px;font-weight:600;font-size:.95rem}
+.about p{color:var(--muted);max-width:760px;margin-bottom:14px}
+.contact{text-align:center}.contact h2::after{margin-left:auto;margin-right:auto}
+.contact .sub{max-width:520px;margin-left:auto;margin-right:auto}
+.contact .cta{justify-content:center}
+footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-size:.9rem}
+footer .wrap{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center}
+footer .social{gap:14px}
+</style>
+</head>
+<body>
+<a href="#main" class="sr" style="position:absolute;left:-999px">Skip to content</a>
+
+<header>
+<nav class="wrap" aria-label="Main navigation">
+  <a href="#home" class="logo" id="logo"></a>
+  <button class="menu" id="menuBtn" aria-expanded="false" aria-controls="navLinks">Menu</button>
+  <ul class="links" id="navLinks">
+    <li><a href="#home">Home</a></li><li><a href="#about">About</a></li><li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li><li><a href="#education">Education</a></li><li><a href="#certifications">Certificates</a></li><li><a href="#achievements">Achievements</a></li><li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+</header>
+
+<main id="main">
+<section class="hero" id="home">
+  <div class="wrap">
+    <div>
+      <p class="hi">Hello, I'm</p>
+      <h1 id="heroName"></h1>
+      <p class="headline" id="heroTitle"></p>
+      <p class="intro" id="heroIntro"></p>
+      <div class="cta">
+        <a class="btn primary" href="#projects">View My Projects</a>
+        <a class="btn ghost" href="#contact">Contact Me</a>
+      </div>
+      <div class="social" id="heroSocial"></div>
+    </div>
+    <div class="side"><img class="photo" alt="Portrait of Ankita Ashish Warkhade" src="photo.png">
+    <div class="code" aria-hidden="true">
+      <div class="dots"><i></i><i></i><i></i></div>
+<pre><span class="c">// developer.js</span>
+<span class="k">const</span> developer = {
+  role: <span class="s">"Full Stack Web Developer"</span>,
+  stack: [<span class="s">"Next.js"</span>, <span class="s">"React"</span>,
+          <span class="s">"Firebase"</span>, <span class="s">"Java"</span>],
+  learning: <span class="s">"DSA, AI/ML"</span>,
+  openTo: <span class="s">"Internships"</span>
+};</pre>
+    </div></div>
+  </div>
+</section>
+
+<section id="about" class="about">
+  <div class="wrap">
+    <h2>About Me</h2>
+    <div style="margin-top:24px" id="aboutText"></div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <h2>Technical Skills</h2>
+    <p class="sub">Technologies and concepts I work with.</p>
+    <div class="grid g3" id="skillGrid"></div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap">
+    <h2>Featured Projects</h2>
+    <p class="sub">Web applications I have designed and built.</p>
+    <div class="grid g3" id="projectGrid"></div>
+  </div>
+</section>
+
+<section id="education">
+  <div class="wrap">
+    <h2>Education</h2>
+    <div class="grid g3" style="margin-top:28px" id="eduGrid"></div>
+  </div>
+</section>
+
+<section id="certifications">
+  <div class="wrap">
+    <h2>Certifications</h2>
+    <p class="sub">Competition awards and certificates.</p>
+    <div class="grid g3" id="certGrid"></div>
+  </div>
+</section>
+
+<section id="achievements">
+  <div class="wrap">
+    <h2>Problem Solving &amp; Achievements</h2>
+    <div class="grid g2" style="margin-top:28px">
+      <div class="card"><h3>Problem Solving</h3><ul id="psList"></ul></div>
+      <div class="card"><h3>Achievements</h3><ul id="achList"></ul></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="wrap">
+    <h2>Get In Touch</h2>
+    <p class="sub">I am looking for internships and entry-level software development opportunities. Feel free to reach out by email or connect on LinkedIn.</p>
+    <div class="cta">
+      <a class="btn primary" id="mailBtn" href="#">Email Me</a>
+    </div>
+    <div class="social" id="contactSocial" style="justify-content:center"></div>
+    <p class="meta" style="margin-top:14px" id="contactLoc"></p>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span id="footText"></span>
+    <div class="social" id="footSocial"></div>
+    <a href="#home">Back to top ↑</a>
+  </div>
+</footer>
+
+<script>
+/* ============ EDIT YOUR DETAILS HERE ============
+   Leave a URL as "" and that link is hidden automatically. */
+const CONFIG = {
+  name: "Ankita Ashish Warkhade",
+  title: "Computer Engineering Student | Software Developer | Full Stack Web Developer",
+  email: "ankitawarkhadecse@gmail.com",
+  location: "Jalna, Maharashtra, India",
+  github: "https://github.com/ankita2005warkhade",
+  linkedin: "https://www.linkedin.com/in/ankita-warkhade-8512812a0",
+  resume: "",    // e.g. "resume.pdf" (upload the PDF next to index.html)
+  intro: "B.Tech Computer Engineering student at Government College of Engineering, Yavatmal, building full stack web applications with Next.js, Firebase and Tailwind CSS. Looking for internship and entry-level software development opportunities.",
+  about: [
+    "I am a Computer Engineering student (2023-2027) with a CGPA of 8.11/10, interested in software development, web development, data analytics, and Artificial Intelligence and Machine Learning.",
+    "I enjoy turning practical ideas into working products, from a wellness platform with AI suggestions to a document upload system for local print shops. I build and deploy full stack applications using GitHub and Vercel.",
+    "To sharpen my problem solving, I practise Data Structures and Algorithms in Java and have solved 130+ problems. My goal is to grow as a software developer in a team where I can learn, contribute, and build useful products."
+  ],
+  skills: {
+    "Programming Languages": ["Java","Python","JavaScript"],
+    "Frontend": ["HTML","CSS","React.js","Next.js","Tailwind CSS"],
+    "Backend & Database": ["Firebase Authentication","Firestore","SQL"],
+    "Developer Tools": ["Git","GitHub","VS Code","Vercel"],
+    "Core Computer Science": ["Data Structures & Algorithms","Object-Oriented Programming","Operating Systems","Computer Networks"],
+    "Areas of Interest": ["Software Development","Web Development","Data Analytics","AI & ML"]
+  },
+  projects: [
+    {
+      title: "CareCycle – Menstrual Wellness Platform", date: "Jun 2025 – Aug 2025",
+      problem: "Helps users monitor their menstrual health and self-care in one place.",
+      points: ["Secure user authentication using Firebase.","Period tracking, symptom logging, monthly cycle summaries and a self-care tracker.","AI-powered wellness suggestions using Gemini AI with a responsive Next.js interface."],
+      tech: ["Next.js","Firebase","Tailwind CSS","Gemini AI"],
+      github: "https://github.com/ankita2005warkhade/period-tracking", demo: "https://period-tracking-tc5v-two.vercel.app"
+    },
+    {
+      title: "Net Cafe PDF Upload Platform", date: "Mar 2025 – Apr 2025",
+      problem: "Simplifies document submission for local printing services.",
+      points: ["Customers upload PDF files for printing.","Secure document storage with Firebase.","Admin dashboard to manage print requests."],
+      tech: ["Next.js","Firebase","Tailwind CSS"],
+      github: "https://github.com/ankita2005warkhade/net-cafe-website", demo: "https://net-cafe-website.vercel.app"
+    },
+    {
+      title: "Resume Screening Predictor", date: "May 2026 – Present",
+      problem: "Helps users analyze how well their resume matches a job description.",
+      points: ["Resume upload and comparison with job descriptions.","Matching results shown on a simple dashboard.","Easy-to-use interface for resume analysis."],
+      tech: ["React.js","Next.js","Python"],
+      github: "https://github.com/ankita2005warkhade/resume_screening_predictor", demo: ""  // add live demo URL when ready
+    }
+  ],
+  education: [
+    {degree:"B.Tech, Computer Engineering", school:"Government College of Engineering, Yavatmal", years:"2023 – 2027", score:"CGPA: 8.11/10"},
+    {degree:"Higher Secondary Certificate (HSC)", school:"Deogiri College, Chhatrapati Sambhajinagar", years:"2022 – 2023", score:"Percentage: 73%"},
+    {degree:"Secondary School Certificate (SSC)", school:"S.B. High School, Ranjani", years:"2020 – 2021", score:"Percentage: 95%"}
+  ],
+  certificates: [
+    {title:"Best Project Award – 3rd Rank", event:"INNOVANZA'25, RBUCON Computing – National Level Project Competition", org:"Ramdeobaba University, Nagpur (School of CSE)", date:"14 May 2025", detail:"Project presented: AI Powered Career Coach."},
+    {title:"1st Runner-Up – C-Rush 2.0", event:"Competitive C programming challenge", org:"Government College of Engineering, Yavatmal (Team GCOEY)", date:"23 May 2025", detail:"Recognised for coding excellence and problem-solving."},
+    {title:"Certificate of Participation – CodeUtsav 1.0", event:"National Level Hackathon", org:"Jagadamba College of Engineering & Technology, Yavatmal", date:"24 March 2026", detail:"Participated as Team GCOEY; theme: excellence in AI/ML and Data Science."}
+  ],
+  problemSolving: ["Solved 130+ DSA problems on LeetCode and Striver's A2Z DSA Sheet.","Comfortable with Arrays, Linked Lists, Stacks, Queues, Binary Search, Recursion and Greedy Algorithms.","Use Java to improve algorithmic thinking."],
+  achievements: ["Selected for Infosys Springboard Pragati – Path to Future Cohort 9.","Won 3rd rank (Best Project Award) at INNOVANZA'25, a national-level project competition at Ramdeobaba University, Nagpur.","1st Runner-Up in C-Rush 2.0, a competitive C programming challenge at GCOEY.","Participated in CodeUtsav 1.0, a national-level hackathon, as part of a team.","Built and deployed full-stack web applications using GitHub and Vercel."]
+};
+/* ============ END OF EDITABLE SECTION ============ */
+
+const $ = id => document.getElementById(id);
+function el(tag, cls, text){const e=document.createElement(tag);if(cls)e.className=cls;if(text!==undefined)e.textContent=text;return e}
+function link(text, url, ext){const a=el("a","",text);a.href=url;if(ext){a.target="_blank";a.rel="noopener noreferrer"}return a}
+function socials(box){
+  [["GitHub",CONFIG.github],["LinkedIn",CONFIG.linkedin],["Resume",CONFIG.resume]].forEach(([t,u])=>{if(u)box.appendChild(link(t,u,true))});
+}
+
+document.title = CONFIG.name + " | Computer Engineering Student & Full Stack Developer";
+const parts = CONFIG.name.split(" ");
+$("logo").innerHTML = "";
+$("logo").append(parts[0][0]+".", el("span","", parts[parts.length-1][0]+"."), " " + parts[0]);
+$("heroName").textContent = CONFIG.name;
+$("heroTitle").textContent = CONFIG.title;
+$("heroIntro").textContent = CONFIG.intro;
+["heroSocial","contactSocial","footSocial"].forEach(id=>socials($(id)));
+CONFIG.about.forEach(t=>$("aboutText").appendChild(el("p","",t)));
+
+Object.entries(CONFIG.skills).forEach(([cat,list])=>{
+  const c=el("div","card"); c.appendChild(el("h3","",cat));
+  const t=el("div","tags"); list.forEach(s=>t.appendChild(el("span","tag",s))); c.appendChild(t);
+  $("skillGrid").appendChild(c);
+});
+
+CONFIG.projects.forEach(p=>{
+  const c=el("article","card");
+  c.appendChild(el("h3","",p.title)); c.appendChild(el("div","meta",p.date));
+  const pr=el("p"); pr.append(el("strong","","Problem solved: "), p.problem); c.appendChild(pr);
+  const ul=el("ul"); p.points.forEach(x=>ul.appendChild(el("li","",x))); c.appendChild(ul);
+  const t=el("div","tags"); p.tech.forEach(s=>t.appendChild(el("span","tag",s))); c.appendChild(t);
+  const l=el("div","plinks");
+  if(p.github) l.appendChild(link("GitHub ↗",p.github,true));
+  if(p.demo) l.appendChild(link("Live Demo ↗",p.demo,true));
+  if(l.children.length) c.appendChild(l);
+  $("projectGrid").appendChild(c);
+});
+
+CONFIG.education.forEach(e=>{
+  const c=el("div","card"); c.appendChild(el("h3","",e.degree));
+  c.appendChild(el("p","",e.school)); c.appendChild(el("div","meta",e.years));
+  c.appendChild(el("div","tags")).appendChild(el("span","tag",e.score));
+  $("eduGrid").appendChild(c);
+});
+CONFIG.problemSolving.forEach(x=>$("psList").appendChild(el("li","",x)));
+CONFIG.achievements.forEach(x=>$("achList").appendChild(el("li","",x)));
+
+CONFIG.certificates.forEach(c=>{
+  const d=el("article","card"); d.appendChild(el("h3","",c.title));
+  d.appendChild(el("p","",c.event)); d.appendChild(el("div","meta",c.org));
+  d.appendChild(el("div","tags")).appendChild(el("span","tag",c.date));
+  d.appendChild(el("p","",c.detail)); $("certGrid").appendChild(d);
+});
+$("mailBtn").href = "mailto:" + CONFIG.email;
+$("mailBtn").textContent = "Email: " + CONFIG.email;
+$("contactLoc").textContent = CONFIG.location;
+$("footText").textContent = "© " + new Date().getFullYear() + " " + CONFIG.name;
+
+/* Mobile menu */
+const btn=$("menuBtn"), nav=$("navLinks");
+btn.addEventListener("click",()=>{const o=nav.classList.toggle("open");btn.setAttribute("aria-expanded",o)});
+nav.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>{nav.classList.remove("open");btn.setAttribute("aria-expanded","false")}));
+document.addEventListener("keydown",e=>{if(e.key==="Escape"){nav.classList.remove("open");btn.setAttribute("aria-expanded","false")}});
+</script>
+</body>
+</html>
